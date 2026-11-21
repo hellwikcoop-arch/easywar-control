@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="uk">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#171a17">
+  <meta name="description" content="Центр контролю EasyWAR — інтуїтивний локальний контроль репозиторію EasyWAR, запитів на злиття, збірок CI, релізів та приймання змін.">
+  <title>Центр контролю EasyWAR</title>
+  <link rel="icon" type="image/svg+xml" href="./badge.svg">
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <a class="skip-link" href="#content">Перейти до вмісту</a>
+  <div id="app" class="app-shell"></div>
+
+  <dialog id="drawer-dialog" class="dialog drawer" aria-labelledby="drawer-title"></dialog>
+  <dialog id="modal-dialog" class="dialog modal" aria-labelledby="modal-title"></dialog>
+  <dialog id="lightbox-dialog" class="dialog lightbox" aria-label="Перегляд знімка екрана"></dialog>
+
+  <div id="toast" class="toast" role="status" aria-live="polite" hidden></div>
+
+  <script type="module" src="./app.js"></script>
+</body>
+</html>

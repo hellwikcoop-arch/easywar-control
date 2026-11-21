@@ -1,0 +1,43 @@
+const PATHS = {
+  pulse: '<path d="M3 12h4l2.5-6 4 12 2.5-6H21"/>',
+  code: '<path d="m8 8-4 4 4 4m8-8 4 4-4 4M13.5 5l-3 14"/>',
+  screens: '<rect x="3" y="4" width="18" height="16" rx="2"/><circle cx="8.5" cy="9" r="1.5"/><path d="m4 17 5-5 4 4 3-3 4 4"/>',
+  work: '<path d="m3 6 2 2 4-4m3 3h9m-18 6 2 2 4-4m3 3h9m-18 6 2 2 4-4m3 3h9"/>',
+  agents: '<rect x="4" y="5" width="16" height="16" rx="2"/><path d="M9 5V3h6v2M8 13l3 3 5-6"/>',
+  repo: '<path d="M5 19V5a2 2 0 0 1 2-2h12v14H7a2 2 0 0 0 0 4h12M8 7h7"/>',
+  pr: '<circle cx="6" cy="5" r="2"/><circle cx="6" cy="19" r="2"/><circle cx="18" cy="19" r="2"/><path d="M6 7v10M18 17v-5a6 6 0 0 0-6-6m2-3-3 3 3 3"/>',
+  branch: '<circle cx="6" cy="5" r="2"/><circle cx="6" cy="19" r="2"/><circle cx="18" cy="6" r="2"/><path d="M6 7v10m0-4h6a6 6 0 0 0 6-5"/>',
+  commit: '<circle cx="12" cy="12" r="3"/><path d="M3 12h6m6 0h6"/>',
+  tag: '<path d="M20.6 13.4 13.4 20.6a2 2 0 0 1-2.8 0L3 13V4h9l8.6 8.6a1.1 1.1 0 0 1 0 .8Z"/><circle cx="7.5" cy="8.5" r="1.2" fill="currentColor"/>',
+  ci: '<circle cx="12" cy="12" r="9"/><path d="m10 8.5 6 3.5-6 3.5v-7Z"/>',
+  decision: '<path d="M12 3v18m-5 0h10M4 7h16m-13 0-4 7a4.5 4.5 0 0 0 8 0Zm10 0-4 7a4.5 4.5 0 0 0 8 0Z"/>',
+  question: '<circle cx="12" cy="12" r="9"/><path d="M9 9a3 3 0 1 1 4 2.8c-.7.3-1 .7-1 2.2m0 3h.01"/>',
+  budget: '<rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 10h18m-13 5h3m5 0h1"/>',
+  next: '<circle cx="12" cy="12" r="9"/><path d="M8 12h8m-4-4 4 4-4 4"/>',
+  log: '<path d="M6 21h12a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2Zm2-13h8m-8 4h8m-8 4h5"/>',
+  search: '<circle cx="10.8" cy="10.8" r="6.3"/><path d="m16 16 4 4"/>',
+  add: '<path d="M12 5v14M5 12h14"/>',
+  refresh: '<path d="M20 12a8 8 0 1 1-2.3-5.6L20 8.7M20 4v4.7h-4.7"/>',
+  edit: '<path d="m14 6 4 4M4 20l4-.8L20 7l-4-4L4 15l-.8 5Z"/>',
+  trash: '<path d="M4 7h16m-10 4v6m4-6v6M6 7l1 13a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2l1-13M9 7V4a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v3"/>',
+  check: '<path d="m5 12 4 4L19 6"/>',
+  cross: '<path d="m6 6 12 12M6 18 18 6"/>',
+  chevron: '<path d="m9 6 6 6-6 6"/>',
+  chevronLeft: '<path d="m15 6-6 6 6 6"/>',
+  arrow: '<path d="M4 12h15m-6-6 6 6-6 6"/>',
+  copy: '<rect x="8" y="8" width="12" height="12" rx="2"/><path d="M16 8V4H4v12h4"/>',
+  outbound: '<path d="M13 5h6v6m0-6-9 9m7-1v6H5V7h6"/>',
+  upload: '<path d="M12 16V4m0 0-4 4m4-4 4 4M4 16v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-2"/>',
+  download: '<path d="M12 4v12m0 0-4-4m4 4 4-4M4 16v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-2"/>',
+  local: '<rect x="3" y="4" width="18" height="12" rx="2"/><path d="M8 21h8m-4-5v5m-3-10 2 2 4-4"/>',
+  clock: '<circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/>',
+  shield: '<path d="M12 22s7-3 7-10V5l-7-3-7 3v7c0 7 7 10 7 10Z"/><path d="m9 12 2 2 4-4"/>',
+  alert: '<path d="M12 9v4m0 4h.01M10.3 4.3 2.7 17.5A2 2 0 0 0 4.4 20.5h15.2a2 2 0 0 0 1.7-3L13.7 4.3a2 2 0 0 0-3.4 0Z"/>',
+  menu: '<path d="M4 6h16M4 12h16M4 18h16"/>',
+  file: '<path d="M7 3h7l4 4v12a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2Zm7 0v5h4M9 13h5m-5 4h5"/>',
+};
+
+export function icon(name, size = 18, extraClass = '') {
+  const cls = extraClass ? ` class="ico ${extraClass}"` : ' class="ico"';
+  return `<svg${cls} aria-hidden="true" viewBox="0 0 24 24" width="${size}" height="${size}" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round">${PATHS[name] ?? PATHS.file}</svg>`;
+}

@@ -1,0 +1,16 @@
+# Локальний стан та база даних SQLite
+state/
+*.sqlite3
+*.sqlite3-journal
+*.sqlite3-wal
+*.sqlite3-shm
+
+# Кешовані знімки з GitHub Actions
+public/live-screens/
+
+# Логи й системні файли
+*.log
+.DS_Store
+__pycache__/
+*.pyc
+.pytest_cache/
